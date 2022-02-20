@@ -2,13 +2,15 @@ var cols, rows;
 var cellWidth = 15
 var grid = []
 var rooms = []
-var roomCount = 5
+var maxRoomCount = 8
+var maxBiomeCount = 8
 var lootDropDenom = 50
 
 var currentCanvasWidth
 var currentCanvasHeight
 
 var c
+var currentBiomeCount
 
 var spritesheet
 var sprite
@@ -53,10 +55,11 @@ function setup() {
   c = createCanvas( currentCanvasWidth, currentCanvasHeight );
   
   setUpGrid();
+  currentBiomeCount = 0
 }
 
 function mouseClicked() {
-  //saveCanvas( c, 'map', 'png')
+  saveCanvas( c, 'map', 'png')
 }
   
 function draw() {
@@ -66,22 +69,28 @@ function draw() {
     grid[cell].show();
   }
 
-  if ( rooms.length < roomCount ) {
-    makeRandomRoom( 5,15,5,15 )
+
+  if ( currentBiomeCount < maxBiomeCount ) {
+    let roomCount = floor( random( 3, maxRoomCount ) )
+    let biomeType = floor( random( 0, 9) )
+    for ( var roomIndex = 0; roomIndex < roomCount; roomIndex++ ) {
+      makeRandomRoom( 5,15,5,15, currentBiomeCount, biomeType )
+      
+    }
+    currentBiomeCount++;
     return;
   }
+  
   if ( separateRooms() ) {
     return;
   }
-
   if ( checkCanvasResize() ) {
-    return;
   }
   
-  connectRooms();
   
-  spritifyRooms()
+   spritifyRooms()
+   connectRooms();
 
-  createBackScape();
+   createBackScape();
   
 }
