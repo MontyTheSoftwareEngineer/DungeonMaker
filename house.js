@@ -43,7 +43,7 @@ function houseRoom( currentRoom ) {
             currentCell.showImage = true;
             currentCell.img = sprite
             currentCell.visited = true
-            return;
+            //return;
         }
     }
 
@@ -55,7 +55,7 @@ function houseRoom( currentRoom ) {
             currentCell.showImage = true;
             currentCell.img = sprite
             currentCell.visited = true
-            return;
+            //return;
         }
     }
 
@@ -67,7 +67,7 @@ function houseRoom( currentRoom ) {
             currentCell.showImage = true;
             currentCell.img = sprite
             currentCell.visited = true
-            return;
+            //return;
         }
     }
 
@@ -79,7 +79,7 @@ function houseRoom( currentRoom ) {
             currentCell.showImage = true;
             currentCell.img = sprite
             currentCell.visited = true
-            return;
+            //return;
         }
     }
 
@@ -96,7 +96,7 @@ function houseRoom( currentRoom ) {
             currentCell.img = sprite
             currentCell.visited = true
 
-            return;
+            //return;
         }
     }
 }

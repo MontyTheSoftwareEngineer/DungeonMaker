@@ -103,7 +103,7 @@ function skinRoom( currentRoom, roomType ) {
                 currentCell.showImage = true;
                 currentCell.img = sprite
                 currentCell.visited = true
-                return;
+                //return;
             }
         }
 
@@ -115,7 +115,7 @@ function skinRoom( currentRoom, roomType ) {
                 currentCell.showImage = true;
                 currentCell.img = sprite
                 currentCell.visited = true
-                return;
+                //return;
             }
         }
 
@@ -127,7 +127,7 @@ function skinRoom( currentRoom, roomType ) {
                 currentCell.showImage = true;
                 currentCell.img = sprite
                 currentCell.visited = true
-                return;
+                //return;
             }
         }
 
@@ -139,7 +139,7 @@ function skinRoom( currentRoom, roomType ) {
                 currentCell.showImage = true;
                 currentCell.img = sprite
                 currentCell.visited = true
-                return;
+                //return;
             }
         }
 
@@ -189,7 +189,7 @@ function skinRoom( currentRoom, roomType ) {
                     }
                 }
 
-                return;
+                //return;
             }
         }
     }
