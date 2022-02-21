@@ -148,7 +148,7 @@ function skinRoom( currentRoom, roomType ) {
             var currentCell = grid[ currentRoom.cells[i] ]
             if ( currentCell && !currentCell.showImage ) {
                 if ( roomType === 0 || roomType === 6 || roomType === 7 || roomType === 8 ) {
-                    let flowers = floor( random( 0, 8) )
+                    let flowers = floor( random( 0, 24) )
                     if ( flowers === 1 ) {
                         sprite = spritesheet.get( 3 * 16 + 3 * 1, 13 * 16 + 13, 16, 16 )
                     }
